@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        变量声明提升
+            通过var声明的变量，在定义语句之前就可以访问到，值为undefined
+        函数声明提升
+            通过function声明函数，在之前就可以直接调用，值：函数定义的对象
+        变量提升函数提升如何产生的。
+     -->
+    <script>
+        var a = 3
+        function fn(){
+            console.log(a)//undifined
+            var a = 4
+        }
+        fn();
+        const c = 2;
+        function fn1 (){
+            console.log('c',c)//初始化之前不能访问c
+            const c = 4;
+        }
+        fn1();
+
+        console.log(b)//undefined 变量提升
+        fn2()//函数提升
+        var b = 4
+        function fn2 (){
+            console.log('f2')
+        }
+        fn3();//不能，变量提升
+        var fn3 = function(){
+            console.log('fn3')
+        }
+    </script>
+</body>
+</html>
