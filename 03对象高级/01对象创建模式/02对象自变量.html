@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        使用{}创建对象，同时制定属性方法
+        适用场景：起始对象内部数据确定
+        问题：创建多个对象，重复代码
+     -->
+    <script>
+        var p = {
+            name:'tom',
+            age:12,
+            setName:function(name){
+                this.name = name
+            }
+        }
+    </script>
+</body>
+</html>
